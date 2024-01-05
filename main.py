@@ -5,6 +5,9 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+EMAIL = "LinkedInEmail"
+PASSWORD= "LinkedInPassword
+
 # Instantiate the WebsiteDataCollector class
 db = WebsiteDataCollector("website.db")
 db._setup_database()
@@ -25,8 +28,8 @@ driver.implicitly_wait(10)
 
 email = driver.find_element(By.ID,'username')  
 password = driver.find_element(By.ID, 'password')
-email.send_keys('david@harket.no')
-password.send_keys('Sodefjed179')
+email.send_keys(EMAIL)
+password.send_keys(PASSWORD)
 password.send_keys(Keys.ENTER)
 driver.implicitly_wait(100)
 
